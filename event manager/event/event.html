@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISITCOM Events</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="event.css">
+ </head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../imageses/logo.png" alt="ISITCOM Logo">
+        </a>
+
+        <div class="navbar">
+            <a href="../index.html#Home">Home</a>
+            <a href="../index.html#About">About</a>
+            <a href="../index.html#Services">Services</a>
+            <a href="../index.html#Gallery">Gallery</a>
+            <a href="../index.html#Review">Review</a>
+            <a href="../index.html#Contact">Contact</a>
+            <a href="events.html" class="active">Events</a>
+            <button class="Login-button">Login</button>
+            <button class="Signup-button">Sign Up</button>
+        </div>
+
+        <div id="menuBars" class="fas fa-bars"></div>
+    </header>
+
+    <!-- Events Section -->
+    <section class="events" id="Events">
+        <h1 class="events-heading">ISITCOM <span>Events</span></h1>
+        
+        <div class="events-filter">
+            <button class="filter-btn active">All Events</button>
+            <button class="filter-btn">Workshops</button>
+            <button class="filter-btn">Seminars</button>
+            <button class="filter-btn">Tech Talks</button>
+            <button class="filter-btn">Social</button>
+        </div>
+        
+        <div class="events-container">
+            <!-- Event 1 -->
+            <div class="event-card">
+                <img src="../imageses/event1.jpg" alt="Web Development Workshop" class="event-image">
+                <div class="event-content">
+                    <div class="event-date">
+                        <i class="fas fa-calendar-alt"></i> October 15, 2023 • 10:00 AM
+                    </div>
+                    <h3 class="event-title">Web Development Workshop</h3>
+                    <p class="event-description">
+                        Learn modern web development techniques with hands-on exercises and expert guidance.
+                    </p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Room A12</span>
+                        <span><i class="fas fa-users"></i> 50 seats</span>
+                    </div>
+                    <button class="event-btn join-btn" data-event="Web Development Workshop">Join Now</button>
+                </div>
+            </div>
+            
+            <!-- Event 2 -->
+            <div class="event-card">
+                <img src="../imageses/event2.jpg" alt="AI Seminar" class="event-image">
+                <div class="event-content">
+                    <div class="event-date">
+                        <i class="fas fa-calendar-alt"></i> October 18, 2023 • 2:00 PM
+                    </div>
+                    <h3 class="event-title">AI in Business Seminar</h3>
+                    <p class="event-description">
+                        Industry leaders discuss practical applications of AI across various business sectors.
+                    </p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Main Auditorium</span>
+                        <span><i class="fas fa-users"></i> Open to all</span>
+                    </div>
+                    <button class="event-btn join-btn" data-event="AI in Business Seminar">Join Now</button>
+                </div>
+            </div>
+            
+            <!-- Event 3 -->
+            <div class="event-card">
+                <img src="../imageses/event3.jpg" alt="Hackathon" class="event-image">
+                <div class="event-content">
+                    <div class="event-date">
+                        <i class="fas fa-calendar-alt"></i> October 22-23, 2023
+                    </div>
+                    <h3 class="event-title">Annual Hackathon</h3>
+                    <p class="event-description">
+                        24-hour coding competition with exciting prizes and networking opportunities.
+                    </p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Tech Lab</span>
+                        <span><i class="fas fa-users"></i> Team event</span>
+                    </div>
+                    <button class="event-btn join-btn" data-event="Annual Hackathon">Join Now</button>
+                </div>
+            </div>
+            
+            <!-- Event 4 -->
+            <div class="event-card">
+                <img src="../imageses/event4.jpg" alt="Career Fair" class="event-image">
+                <div class="event-content">
+                    <div class="event-date">
+                        <i class="fas fa-calendar-alt"></i> November 5, 2023 • 9:00 AM
+                    </div>
+                    <h3 class="event-title">Tech Career Fair</h3>
+                    <p class="event-description">
+                        Meet with top tech companies and explore internship and job opportunities.
+                    </p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Exhibition Hall</span>
+                        <span><i class="fas fa-users"></i> 30+ companies</span>
+                    </div>
+                    <button class="event-btn join-btn" data-event="Tech Career Fair">Join Now</button>
+                </div>
+            </div>
+            
+            <!-- Event 5 -->
+            <div class="event-card">
+                <img src="../imageses/event5.avif" alt="Mobile Development" class="event-image">
+                <div class="event-content">
+                    <div class="event-date">
+                        <i class="fas fa-calendar-alt"></i> November 12, 2023 • 1:30 PM
+                    </div>
+                    <h3 class="event-title">Mobile App Development</h3>
+                    <p class="event-description">
+                        Hands-on workshop covering Flutter and React Native for cross-platform apps.
+                    </p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Room B07</span>
+                        <span><i class="fas fa-users"></i> 25 seats</span>
+                    </div>
+                    <button class="event-btn join-btn" data-event="Mobile App Development">Join Now</button>
+                </div>
+            </div>
+            
+            <!-- Event 6 -->
+            <div class="event-card">
+                <img src="../imageses/event6.jpg" alt="Cybersecurity" class="event-image">
+                <div class="event-content">
+                    <div class="event-date">
+                        <i class="fas fa-calendar-alt"></i> November 20, 2023 • 3:00 PM
+                    </div>
+                    <h3 class="event-title">Cybersecurity Workshop</h3>
+                    <p class="event-description">
+                        Learn essential cybersecurity practices and ethical hacking fundamentals.
+                    </p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Computer Lab 3</span>
+                        <span><i class="fas fa-users"></i> Limited seats</span>
+                    </div>
+                    <button class="event-btn join-btn" data-event="Cybersecurity Workshop">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Register for <span id="eventName"></span></h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" name="studentId" required>
+                </div>
+                <div class="form-group">
+                    <label for="studyLevel">Study Level</label>
+                    <select id="studyLevel" name="studyLevel" required>
+                        <option value="">Select your level</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="Master">Master</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="specialization">Specialization</label>
+                    <input type="text" id="specialization" name="specialization" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="form-submit">Submit Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="Footer">
+        <!-- Your footer content from index.html -->
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../index.js"></script>
+    <script src="event.js"></script>
+</body>
+</html>

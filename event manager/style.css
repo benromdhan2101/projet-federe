@@ -258,24 +258,326 @@ html::-webkit-scrollbar-track{
 /*Services section end*/
 
 
-/*Gallery section start*/
-.gallery{
-    margin-bottom: 200px;
+/* Gallery Section */
+.gallery-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    margin-bottom: 4rem;
 }
-.gallery .boxCotainer{
+
+.gallery-section__heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.gallery-section__heading span {
+    color: #f01027;
+}
+
+.gallery-section__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
-    gap: 1.5rem;
-
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-.gallery .boxContainer .box img{
-    height: 100%;
+
+.gallery-section__card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.gallery-section__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-section__image {
     width: 100%;
+    height: 250px;
     object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
 }
 
+.gallery-section__card:hover .gallery-section__image {
+    opacity: 0.9;
+}
 
-/*Gallery section end*/
+.gallery-section__content {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.gallery-section__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.gallery-section__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery-section__action-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0.5rem;
+}
+
+.gallery-section__action-btn:hover {
+    color: #f01027;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-section__grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .gallery-section__heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-section {
+        padding: 2rem 1rem;
+    }
+    
+    .gallery-section__grid {
+        grid-template-columns: 1fr;
+    }
+}
+/*gallery section end*/
+
+/*Review section */
+.review-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.review-section__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.review-section__heading span {
+    color: #f01027;
+}
+
+.review-section__form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem;
+}
+
+.review-section__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.review-section__label {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.review-section__input,
+.review-section__textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.review-section__textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.review-section__rating-container {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.review-section__stars {
+    display: flex;
+    gap: 0.3125rem;
+}
+
+.review-section__star {
+    font-size: 1.5rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.review-section__star:hover, 
+.review-section__star--active {
+    color: #ffc107;
+}
+
+.review-section__rating-value {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.review-section__submit-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 0 auto;
+    display: block;
+}
+
+.review-section__submit-btn:hover {
+    background-color: #333;
+}
+
+.review-section__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.review-section__item {
+    background-color: #f9f9f9;
+    padding: 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid #f01027;
+}
+
+.review-section__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.625rem;
+}
+
+.review-section__name {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-section__rating {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.review-section__comment {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.contact-section__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-section__heading span {
+    color: #f01027;
+}
+
+.contact-section__form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section__form-row {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.contact-section__form-group {
+    flex: 1;
+}
+
+.contact-section__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.contact-section__input,
+.contact-section__textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+
+.contact-section__textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-section__divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 1.875rem 0;
+}
+
+.contact-section__submit-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 0 auto;
+    display: block;
+}
+
+.contact-section__submit-btn:hover {
+    background-color: #333;
+}
+/*contact section end*/
 
 
 /*Media query*/
