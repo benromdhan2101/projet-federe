@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.querySelector('.Login-button').addEventListener('click', () => {
-    window.location.href = './login page/login.html';
+    window.location.href = '../login page/login.html';
 });
 
 document.querySelector('.Signup-button').addEventListener('click', () => {
-    window.location.href = './sign up/sign-up.html';
+    window.location.href = '../sign up/sign-up.html';
 });
